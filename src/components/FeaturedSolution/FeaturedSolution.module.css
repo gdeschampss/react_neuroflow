@@ -1,0 +1,238 @@
+.featuredSection {
+  padding: 8rem 0;
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0a0a0f 100%);
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 190, 173, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.featuredContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: #25D366;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIcon {
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefits li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+}
+
+/* Phone Mockup */
+.visualSide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.phoneMockup {
+  width: 320px;
+  height: 600px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.05);
+  background: rgba(10, 10, 15, 0.8);
+}
+
+.phoneHeader {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contactInfo h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.contactInfo span {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+}
+
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 85%;
+}
+
+.received {
+  background: rgba(255, 255, 255, 0.05);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.sent {
+  background: linear-gradient(135deg, rgba(0, 190, 173, 0.2), rgba(2, 89, 89, 0.2));
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+  border: 1px solid rgba(0, 190, 173, 0.2);
+}
+
+.floatingWidget1 {
+  position: absolute;
+  bottom: 80px;
+  left: -40px;
+  background: rgba(15, 15, 20, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+.widgetIcon {
+  color: var(--accent-primary);
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 992px) {
+  .featuredContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .textSide {
+    text-align: center;
+  }
+  
+  .benefits {
+    align-items: center;
+  }
+  
+  .floatingWidget1 {
+    left: -10px;
+  }
+  
+  .phoneMockup {
+    width: 280px;
+    height: 500px;
+  }
+}
+
+.whatsBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.2rem;
+  background: #25D366;
+  color: #0E0D0D;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+}
+
+.whatsBtnIcon {
+  font-size: 1.3rem;
+  margin-right: 0.75rem;
+}
+
+.whatsBtn:hover {
+  background: #fff;
+  color: #0E0D0D;
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}

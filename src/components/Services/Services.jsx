@@ -10,11 +10,36 @@ import styles from './Services.module.css';
 import { BsRobot, BsWindowSidebar, BsFileEarmarkCode, BsCpu, BsDiagram3, BsGraphUpArrow } from 'react-icons/bs';
 
 const servicesData = [
-  { icon: <BsDiagram3 />, title: 'CRM & Funis de Vendas', desc: 'Configuração completa do seu CRM comercial, criação de funis inteligentes e treinamento prático para toda a sua equipe.' },
-  { icon: <BsCpu />, title: 'Agente de IA (WhatsApp)', desc: 'Atendimento humanizado e qualificação inteligente de leads 24h por dia no WhatsApp, fechando negócios no piloto automático.' },
-  { icon: <BsRobot />, title: 'Automações de Vendas', desc: 'Respostas instantâneas no Instagram (ex: comentários "eu quero"), disparos direcionados e fluxos automatizados de trabalho.' },
-  { icon: <BsWindowSidebar />, title: 'Sites & Landing Pages', desc: 'Páginas premium de altíssima velocidade e conversão, desenhadas para reter o tráfego e transformá-lo em clientes.' },
-  { icon: <BsGraphUpArrow />, title: 'Operação Completa', desc: 'Nossa solução premium definitiva: CRM configurado, automações avançadas e Agente de IA integrados para escala máxima.' }
+  { 
+    icon: <BsDiagram3 />, 
+    title: 'CRM & Funis de Vendas', 
+    desc: 'Configuração completa do seu CRM comercial, criação de funis inteligentes e treinamento prático para toda a sua equipe.',
+    descMobile: 'CRM configurado de ponta a ponta, funis inteligentes e treinamento completo para sua equipe.'
+  },
+  { 
+    icon: <BsCpu />, 
+    title: 'Agente de IA (WhatsApp)', 
+    desc: 'Atendimento humanizado e qualificação inteligente de leads 24h por dia no WhatsApp, fechando negócios no piloto automático.',
+    descMobile: 'IA conversacional 24h no WhatsApp para qualificar leads e fechar negócios no automático.'
+  },
+  { 
+    icon: <BsRobot />, 
+    title: 'Automações de Vendas', 
+    desc: 'Respostas instantâneas no Instagram (ex: comentários "eu quero"), disparos direcionados e fluxos automatizados de trabalho.',
+    descMobile: 'Respostas no Instagram DM (ex: comentários "eu quero") e fluxos de trabalho automáticos.'
+  },
+  { 
+    icon: <BsWindowSidebar />, 
+    title: 'Sites & Landing Pages', 
+    desc: 'Páginas premium de altíssima velocidade e conversão, desenhadas para reter o tráfego e transformá-lo em clientes.',
+    descMobile: 'Design premium de alta velocidade e conversão para reter tráfego e captar leads.'
+  },
+  { 
+    icon: <BsGraphUpArrow />, 
+    title: 'Operação Completa', 
+    desc: 'Nossa solução premium definitiva: CRM configurado, automações avançadas e Agente de IA integrados para escala máxima.',
+    descMobile: 'Nossa solução definitiva: CRM, automações avançadas e Agente de IA integrados para escala.'
+  }
 ];
 
 const Services = () => {
@@ -77,7 +102,8 @@ const Services = () => {
                     {service.icon}
                   </div>
                   <h3 className={styles.cardTitle}>{service.title}</h3>
-                  <p className={styles.cardDesc}>{service.desc}</p>
+                  <p className={`${styles.cardDesc} ${styles.desktopDesc}`}>{service.desc}</p>
+                  <p className={`${styles.cardDesc} ${styles.mobileDesc}`}>{service.descMobile}</p>
                   <div className={styles.cardGlow}></div>
                 </div>
               </SwiperSlide>

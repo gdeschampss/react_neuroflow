@@ -61,8 +61,11 @@ const About = () => {
             Inteligência Comercial para <br />
             <span className="text-gradient-accent">Impulsionar o Crescimento</span>
           </h2>
-          <p className={styles.description}>
+          <p className={`${styles.description} ${styles.desktopDesc}`}>
             A NeuroFlow ajuda sua empresa a vender mais e atender melhor sem processos confusos. Nós estruturamos e configuramos o seu CRM de vendas com funis bem desenhados, capacitamos o seu time comercial com treinamentos práticos e conectamos agentes de IA inteligentes que atendem 24/7 no WhatsApp, criando um fluxo comercial altamente lucrativo.
+          </p>
+          <p className={`${styles.description} ${styles.mobileDesc}`}>
+            Estruturamos seu CRM de vendas com funis inteligentes, capacitamos seu time comercial com treinamentos práticos e integramos agentes de IA que atendem 24/7 no WhatsApp, criando um fluxo comercial altamente lucrativo.
           </p>
 
           <ul className={styles.featureList}>

@@ -47,3 +47,10 @@
   background-size: 30px 30px;
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .veilLayer1, .veilLayer2, .veilLayer3 {
+    filter: blur(30px);
+    animation: none;
+  }
+}

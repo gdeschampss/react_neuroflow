@@ -340,6 +340,8 @@
 @media (max-width: 900px) {
   .modalOverlay {
     padding: 1rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
   .modalContent {
     padding: 2rem;

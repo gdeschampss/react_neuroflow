@@ -46,3 +46,10 @@
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
+
+@media (max-width: 768px) {
+  .auroraGradients, .auroraGradients2 {
+    filter: blur(40px);
+    animation: none;
+  }
+}

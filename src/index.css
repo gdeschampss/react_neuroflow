@@ -59,6 +59,14 @@ ul {
   border: var(--border-glass);
 }
 
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(14, 13, 13, 0.85);
+  }
+}
+
 /* Gradients text */
 .text-gradient {
   background: linear-gradient(90deg, #fff 0%, #a1a1aa 100%);
